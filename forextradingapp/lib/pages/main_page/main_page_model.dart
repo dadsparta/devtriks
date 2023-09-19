@@ -1,6 +1,5 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-
 import '../../utilities/consts/colors.dart';
 import '../analysis_page/analysis_page.dart';
 import '../community_page/community_page_view.dart';
@@ -20,8 +19,6 @@ class _MainPageState extends State<MainPage> {
     CommunityPageView(),
     AnalysisPageView(),
     SettingsPageView()
-
-
   ];
 
   @override

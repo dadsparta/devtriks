@@ -1,6 +1,7 @@
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:forextradingapp/utilities/samples/currency_card.dart';
 
 import '../../utilities/consts/colors.dart';
 import '../../utilities/consts/texts.dart';
@@ -18,6 +19,7 @@ class _AnalysisPageViewState extends State<AnalysisPageView> {
     return CupertinoPageScaffold(
       child: SafeArea(
         child: Container(
+          padding: const EdgeInsets.fromLTRB(14, 0, 14, 0),
           color: firstColor,
           child: ListView(
               shrinkWrap: true,
@@ -31,26 +33,19 @@ class _AnalysisPageViewState extends State<AnalysisPageView> {
                 const SizedBox(
                   height: 20,
                 ),
-                Container(
-                  child: GridView.builder(
-                    scrollDirection: Axis.vertical,
-                    shrinkWrap: true,
-                    physics: const NeverScrollableScrollPhysics(),
-                    gridDelegate: const SliverGridDelegateWithMaxCrossAxisExtent(
-                        maxCrossAxisExtent: 200,
-                        childAspectRatio: 3 / 2,
-                        crossAxisSpacing: 20,
-                        mainAxisSpacing: 20),
-                    itemCount: 12,
-                    itemBuilder: (context, index) {
-                      return Container(
-                        height: 200,
-                        width: 200,
-                        color: uiColor,
-                        child: Text('a'),
-                      );
-                    },
-                  ),
+                GridView.builder(
+                  scrollDirection: Axis.vertical,
+                  shrinkWrap: true,
+                  physics: const NeverScrollableScrollPhysics(),
+                  gridDelegate: const SliverGridDelegateWithMaxCrossAxisExtent(
+                      maxCrossAxisExtent: 200,
+                      childAspectRatio: 3 / 2,
+                      crossAxisSpacing: 20,
+                      mainAxisSpacing: 20),
+                  itemCount: 12,
+                  itemBuilder: (context, index) {
+                    return  CurrencyCard(index: index);
+                  },
                 )
               ]),
         ),
