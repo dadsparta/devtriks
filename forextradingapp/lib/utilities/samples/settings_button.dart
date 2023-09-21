@@ -32,7 +32,7 @@ class SettingsButton extends StatelessWidget {
               SubTitleText(text: secondText),
             ],
           ),
-          onPressed: () => onTap),
+          onPressed: () => onTap()),
     );
   }
 }

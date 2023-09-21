@@ -1,5 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_inappwebview/flutter_inappwebview.dart';
+import 'package:in_app_review/in_app_review.dart';
 import '../../utilities/consts/colors.dart';
 import '../../utilities/consts/texts.dart';
 import '../../utilities/samples/settings_button.dart';
@@ -12,6 +14,7 @@ class SettingsPageView extends StatefulWidget {
 }
 
 class _SettingsPageViewState extends State<SettingsPageView> {
+  final InAppReview inAppReview = InAppReview.instance;
   bool isSwitched = false;
 
   @override
@@ -43,7 +46,9 @@ class _SettingsPageViewState extends State<SettingsPageView> {
               SettingsButton(
                 firstText: 'Rate App',
                 secondText: 'Your opinion is important to us',
-                onTap: () {},
+                onTap: () {
+                  inAppReview.openStoreListing(appStoreId: '6467123708');
+                },
               ),
               SettingsButton(
                 firstText: 'About App',
@@ -53,12 +58,34 @@ class _SettingsPageViewState extends State<SettingsPageView> {
               SettingsButton(
                 firstText: 'Privacy Policy',
                 secondText: 'Conditions of use of your data',
-                onTap: () {},
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    CupertinoPageRoute(
+                      builder: (context) => UiViewSettings(
+                        url:
+                            'https://docs.google.com/document/d/1ECkr13MXcSZRzh5HLCodJXK4IQ77yfGR8xcjXKNlfaw/edit?usp=sharing',
+                        name: 'Privacy Policy',
+                      ),
+                    ),
+                  );
+                },
               ),
               SettingsButton(
                 firstText: 'Terms & Conditions',
                 secondText: 'Regulations and rules of service',
-                onTap: () {},
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    CupertinoPageRoute(
+                      builder: (context) => UiViewSettings(
+                        url:
+                            'https://docs.google.com/document/d/1ECkr13MXcSZRzh5HLCodJXK4IQ77yfGR8xcjXKNlfaw/edit?usp=sharing',
+                        name: 'Privacy Policy',
+                      ),
+                    ),
+                  );
+                },
               ),
               Row(
                 children: [
@@ -80,6 +107,25 @@ class _SettingsPageViewState extends State<SettingsPageView> {
               )
             ],
           ),
+        ),
+      ),
+    );
+  }
+}
+
+class UiViewSettings extends StatelessWidget {
+  late String url;
+  late String name;
+
+  // ignore: use_key_in_widget_constructors
+  UiViewSettings({required this.url, required this.name});
+
+  @override
+  Widget build(BuildContext context) {
+    return CupertinoPageScaffold(
+      child: InAppWebView(
+        initialUrlRequest: URLRequest(
+          url: Uri.parse(url),
         ),
       ),
     );
