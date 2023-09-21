@@ -23,15 +23,20 @@ class _SettingsPageViewState extends State<SettingsPageView> {
           padding: const EdgeInsets.fromLTRB(20, 0, 20, 0),
           child: ListView(
             children: [
-              SizedBox(height: 20,),
+              const SizedBox(
+                height: 20,
+              ),
               Align(
                 child: PageText(text: "Settings"),
               ),
-              SizedBox(height: 20,),
+              const SizedBox(
+                height: 20,
+              ),
               const Divider(
-                  color: Color(
-                0xFF1F2257,
-              )),
+                color: Color(
+                  0xFF1F2257,
+                ),
+              ),
               const SizedBox(
                 height: 20,
               ),

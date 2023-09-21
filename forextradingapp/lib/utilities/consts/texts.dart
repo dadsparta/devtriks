@@ -51,3 +51,21 @@ class SubTitleText extends StatelessWidget {
   }
 }
 
+class NewsText extends StatelessWidget {
+  NewsText({Key? key, required this.text}) : super(key: key);
+  String text;
+  @override
+  Widget build(BuildContext context) {
+    return Text(
+      text,
+      style: GoogleFonts.unbounded(
+        fontWeight: FontWeight.w400,
+        color: const Color(
+          0xFF82839A,
+        ),
+        fontSize: 10,
+      ),
+    );;
+  }
+}
+

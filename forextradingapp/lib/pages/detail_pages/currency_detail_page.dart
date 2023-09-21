@@ -17,7 +17,7 @@ class CurrencyDetailPage extends StatelessWidget {
     return CupertinoPageScaffold(
       child: SafeArea(
         child: Container(
-          padding: EdgeInsets.fromLTRB(14, 0, 14, 0),
+          padding: const EdgeInsets.fromLTRB(14, 0, 14, 0),
           decoration: const BoxDecoration(color: firstColor),
           child: ListView(
             children: [
@@ -29,30 +29,43 @@ class CurrencyDetailPage extends StatelessWidget {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Container(
-                      height:40,
+                    SizedBox(
+                      height: 40,
                       width: 40,
-                      child: CupertinoButton(
-                        color:  uiColor,
-                        alignment: Alignment.topLeft,
-                        child: Icon(CupertinoIcons.arrow_left),
-                        onPressed: () {
-                          Navigator.pop(context);
-                        },
+                      child: Stack(
+                        children: [
+                          CupertinoButton(
+                            alignment: Alignment.topLeft,
+                            onPressed: () {
+                              Navigator.pop(context);
+                            },
+                            child: Container(),
+                          ),
+                          const Align(
+                              alignment: Alignment.center,
+                              child: Icon(CupertinoIcons.arrow_left, color: Color(0xFFFFFFFF),),),
+                        ],
                       ),
                     ),
                     Expanded(
-                      child: Align(alignment: Alignment.center,child: TitleText(text: forexPair.name)),
+                      child: Align(
+                          alignment: Alignment.center,
+                          child: TitleText(text: forexPair.name)),
                     ),
-                    Container(width: 40, height: 40,)
+                    Container(
+                      width: 40,
+                      height: 40,
+                    )
                   ],
                 ),
               ),
               const SizedBox(
                 height: 20,
               ),
-              SizedBox(
+              Container(
                 height: 400,
+                decoration: BoxDecoration(
+                    borderRadius: BorderRadius.all(Radius.circular(8))),
                 child: InAppWebView(
                   initialData: InAppWebViewInitialData(
                       data: """<!-- TradingView Widget BEGIN -->
@@ -94,7 +107,7 @@ class CurrencyDetailPage extends StatelessWidget {
                     mainAxisSpacing: 20),
                 itemCount: 4,
                 itemBuilder: (context, index) {
-                  return  CurrencyCard(index: index);
+                  return CurrencyCard(index: index);
                 },
               )
             ],
