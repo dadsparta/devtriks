@@ -8,21 +8,12 @@ class UiViewSettings extends StatelessWidget {
   UiViewSettings({required this.url, required this.name});
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Color.fromARGB(255, 25, 24, 97),
-        title: Text(
-          name,
-          style: const TextStyle(
-            color: Colors.white,
+    return  SafeArea(
+        child: InAppWebView(
+          initialUrlRequest: URLRequest(
+            url: Uri.parse(url),
           ),
         ),
-      ),
-      body: InAppWebView(
-        initialUrlRequest: URLRequest(
-          url: Uri.parse(url),
-        ),
-      ),
     );
   }
 }
