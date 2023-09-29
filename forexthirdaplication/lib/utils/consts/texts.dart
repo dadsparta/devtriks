@@ -66,6 +66,7 @@ class SimpleText extends StatelessWidget {
       style: GoogleFonts.montserrat(
         fontSize: 10,
         fontWeight: FontWeight.w400,
+        color: textColor
       ),
     );
   }

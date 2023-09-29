@@ -21,31 +21,37 @@ class _State extends State<CommunityDetailPage> {
           onPressed: () {
             return Navigator.pop(context);
           },
-          icon: Icon(Icons.arrow_back_ios_new_outlined),
+          icon: const Icon(Icons.arrow_back_ios_new_outlined),
         ),
-        actions: [Container(height: 20, width: 20,)],
+        actions: const [
+          SizedBox(
+            height: 20,
+            width: 20,
+            child: Text(''),
+          )
+        ],
         title: const Center(
           child: AppBarText(text: 'Community'),
         ),
       ),
       body: Container(
-        padding: EdgeInsets.fromLTRB(20, 0, 20, 0),
+        padding: const EdgeInsets.fromLTRB(20, 0, 20, 0),
         color: firstColor,
         child: ListView(
           children: [
-            SizedBox(
+            const SizedBox(
               height: 20,
             ),
             ClipRRect(
               borderRadius: BorderRadius.circular(12),
               child: Image.network(CommunityList.stats[widget.index].imageUrl),
             ),
-            SizedBox(
+            const SizedBox(
               height: 20,
             ),
             ArticleTitleTextDetail(
                 text: CommunityList.stats[widget.index].title),
-            SizedBox(
+            const SizedBox(
               height: 20,
             ),
             SimpleText(text: CommunityList.stats[widget.index].description)

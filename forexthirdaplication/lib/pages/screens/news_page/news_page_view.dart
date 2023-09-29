@@ -1,14 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:forexthirdaplication/utils/enums/community_list.dart';
-import 'package:forexthirdaplication/utils/sampls/com_article_preview.dart';
+import 'package:forexthirdaplication/utils/consts/colors.dart';
+import 'package:forexthirdaplication/utils/enums/news_constants.dart';
+import 'package:forexthirdaplication/utils/sampls/news_article_preview.dart';
+import 'package:forexthirdaplication/utils/sampls/widget_sample.dart';
+import 'package:forexthirdaplication/utils/states/news_favorites.dart';
 import 'package:intl/intl.dart';
 import 'package:provider/provider.dart';
-
-import '../../../utils/consts/colors.dart';
-import '../../../utils/sampls/news_article_preview.dart';
-import '../../../utils/sampls/widget_sample.dart';
-import '../../../utils/states/news_favorites.dart';
-
 
 DateTime now = DateTime.now();
 
@@ -16,14 +13,14 @@ DateTime now = DateTime.now();
 DateFormat dateFormat = DateFormat('MMMd');
 String formattedDate = dateFormat.format(now);
 
-class CommunityPageView extends StatefulWidget {
-  const CommunityPageView({Key? key}) : super(key: key);
+class MainPageView extends StatefulWidget {
+  const MainPageView({Key? key}) : super(key: key);
 
   @override
-  State<CommunityPageView> createState() => _CommunityPageViewState();
+  State<MainPageView> createState() => _MainPageViewState();
 }
 
-class _CommunityPageViewState extends State<CommunityPageView> {
+class _MainPageViewState extends State<MainPageView> {
 
   @override
   Widget build(BuildContext context) {
@@ -41,13 +38,13 @@ class _CommunityPageViewState extends State<CommunityPageView> {
                 children: [
                   WidgetApp(
                       title: 'Total',
-                      subText: CommunityList.stats.length.toString()),
+                      subText: NewsList.stats.length.toString()),
                   Container(
                     width: 1,
                     height: 20,
                     decoration: const BoxDecoration(color: Color(0x882C2B2B)),
                   ),
-                  WidgetApp(title: 'Favorite', subText: favoriteState.commFavorite.toString()),
+                  WidgetApp(title: 'Favorite', subText: favoriteState.favorite.toString()),
                   Container(
                     width: 1,
                     height: 20,
@@ -62,9 +59,9 @@ class _CommunityPageViewState extends State<CommunityPageView> {
               ListView.separated(
                 shrinkWrap: true,
                 physics: NeverScrollableScrollPhysics(),
-                itemCount: CommunityList.stats.length,
+                itemCount: NewsList.stats.length,
                 itemBuilder: (context, index) {
-                  return CommunityPreview(
+                  return NewsPreview(
                     index: index--,
                   );
                 },
