@@ -4,8 +4,8 @@ import 'package:forexthirdaplication/pages/detail_pages/community_page.dart';
 import 'package:forexthirdaplication/utils/enums/community_list.dart';
 import 'package:provider/provider.dart';
 
-import '../consts/colors.dart';
-import '../consts/texts.dart';
+import '../consts/constant_colors.dart';
+import '../consts/constant_text.dart';
 import '../states/news_favorites.dart';
 
 class CommunityPreview extends StatefulWidget {

@@ -1,12 +1,12 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:forexthirdaplication/utils/consts/colors.dart';
+import 'package:forexthirdaplication/utils/consts/constant_colors.dart';
 import 'package:forexthirdaplication/utils/enums/news_constants.dart';
 import 'package:forexthirdaplication/utils/states/news_favorites.dart';
 import 'package:provider/provider.dart';
 
 import '../../pages/detail_pages/news_detail_page.dart';
-import '../consts/texts.dart';
+import '../consts/constant_text.dart';
 
 class NewsPreview extends StatefulWidget {
   const NewsPreview({Key? key, required this.index})

@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:forexthirdaplication/utils/consts/colors.dart';
-import 'package:forexthirdaplication/utils/consts/texts.dart';
+import 'package:forexthirdaplication/utils/consts/constant_colors.dart';
+import 'package:forexthirdaplication/utils/consts/constant_text.dart';
 
 import '../../../utils/sampls/settings_button.dart';
 import '../../../utils/sampls/view_settings.dart';

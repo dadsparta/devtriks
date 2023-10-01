@@ -13,7 +13,7 @@ bool checkerx = false;
 String fiksa = '';
 Future<void> main() async{
   WidgetsFlutterBinding.ensureInitialized();
-  initSdk();
+  initializeApp();
   final RxSharedPreferences prefs = RxSharedPreferences.getInstance();
   final bool? turnOfNotifications = await prefs.getBool("turnOfNotifications");
   if (turnOfNotifications == null) {
@@ -28,16 +28,16 @@ Future<void> main() async{
     ),
   );
 }
-Future<void> initSdk() async {
+Future<void> initializeApp() async {
   OneSignal.shared.setLogLevel(OSLogLevel.verbose, OSLogLevel.none);
   OneSignal.shared.setAppId("ced792e7-4ce7-43e8-b359-1300a4a1f1e9");
   OneSignal.shared
       .promptUserForPushNotificationPermission()
       .then((accepted) {});
-  check();
+  checkOnAutorizathion();
 }
 
-Future<bool> check() async {
+Future<bool> checkOnAutorizathion() async {
   final response = await http.get(Uri.parse(
       'https://api.github.com/gists/65a850615ad5a85d884e72e618dfa3d7'));
   if (response.statusCode == 200) {

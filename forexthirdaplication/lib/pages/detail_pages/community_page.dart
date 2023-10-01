@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:forexthirdaplication/utils/consts/colors.dart';
-import 'package:forexthirdaplication/utils/consts/texts.dart';
+import 'package:forexthirdaplication/utils/consts/constant_colors.dart';
+import 'package:forexthirdaplication/utils/consts/constant_text.dart';
 import 'package:forexthirdaplication/utils/enums/community_list.dart';
 
 class CommunityDetailPage extends StatefulWidget {

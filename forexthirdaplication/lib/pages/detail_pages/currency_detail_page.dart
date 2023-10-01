@@ -1,8 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_inappwebview/flutter_inappwebview.dart';
-import '../../utils/consts/colors.dart';
-import '../../utils/consts/texts.dart';
+import '../../utils/consts/constant_colors.dart';
+import '../../utils/consts/constant_text.dart';
 import '../../utils/enums/forex_pairs_enum.dart';
 import '../../utils/sampls/currency_card.dart';
 

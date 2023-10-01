@@ -4,7 +4,7 @@ import 'package:forexthirdaplication/utils/sampls/com_article_preview.dart';
 import 'package:intl/intl.dart';
 import 'package:provider/provider.dart';
 
-import '../../../utils/consts/colors.dart';
+import '../../../utils/consts/constant_colors.dart';
 import '../../../utils/sampls/news_article_preview.dart';
 import '../../../utils/sampls/widget_sample.dart';
 import '../../../utils/states/news_favorites.dart';

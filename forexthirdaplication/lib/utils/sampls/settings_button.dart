@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-import '../consts/texts.dart';
+import '../consts/constant_text.dart';
 
 // ignore: must_be_immutable
 class SettingsButton extends StatelessWidget {

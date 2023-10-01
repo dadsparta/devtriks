@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:forexthirdaplication/utils/consts/colors.dart';
+import 'package:forexthirdaplication/utils/consts/constant_colors.dart';
 import 'package:forexthirdaplication/utils/enums/news_constants.dart';
 import 'package:forexthirdaplication/utils/sampls/news_article_preview.dart';
 import 'package:forexthirdaplication/utils/sampls/widget_sample.dart';

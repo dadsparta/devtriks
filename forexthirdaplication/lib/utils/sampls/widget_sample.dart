@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../consts/texts.dart';
+import '../consts/constant_text.dart';
 
 class WidgetApp extends StatelessWidget {
   WidgetApp({Key? key, required this.title, required this.subText})

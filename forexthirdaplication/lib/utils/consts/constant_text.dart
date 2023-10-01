@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:forexthirdaplication/utils/consts/colors.dart';
+import 'package:forexthirdaplication/utils/consts/constant_colors.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class ArticleTitleText extends StatelessWidget {

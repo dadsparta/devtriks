@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../../utils/consts/colors.dart';
+import '../../../utils/consts/constant_colors.dart';
 import '../../../utils/sampls/currency_card.dart';
 
 class CurrencyPageView extends StatefulWidget {

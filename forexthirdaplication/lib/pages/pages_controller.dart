@@ -1,14 +1,14 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:forexthirdaplication/pages/screens/community_page/community_page_view.dart';
-import 'package:forexthirdaplication/pages/screens/currency_page/currency_page_view.dart';
-import 'package:forexthirdaplication/pages/screens/news_page/news_page_view.dart';
+import 'package:forexthirdaplication/pages/screens/cash_page/cash_page.dart';
+import 'package:forexthirdaplication/pages/screens/info_page/news_page_view.dart';
 import 'package:forexthirdaplication/pages/screens/settings_page/settings_page_view.dart';
-import 'package:forexthirdaplication/utils/consts/texts.dart';
+import 'package:forexthirdaplication/pages/screens/society_page/society_page.dart';
+import 'package:forexthirdaplication/utils/consts/constant_text.dart';
 import 'package:forexthirdaplication/utils/states/news_favorites.dart';
 import 'package:provider/provider.dart';
 
-import '../utils/consts/colors.dart';
+import '../utils/consts/constant_colors.dart';
 
 class PageControllerModel extends StatefulWidget {
   const PageControllerModel({

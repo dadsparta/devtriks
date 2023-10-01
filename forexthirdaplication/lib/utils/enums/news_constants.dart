@@ -93,7 +93,7 @@ Many Western companies, including the likes of Renault, Shell, McDonald's and ot
       description:
           "ZURICH, Sept 19 (Reuters) - Swiss financial regulator FINMA is increasing the number of specialists overseeing UBS (UBSG.S) following its takeover of Credit Suisse, FINMA Chair Marlene Amstad said.\n\nFINMA, which has come under fire for failing to act swifter or more effectively during the Credit Suisse crisis, is increasing its focus on Switzerland's remaining globally systemically important bank.",
       imageUrl:
-          "https://www.reuters.com/resizer/RN63d7uJyj__769jZOny04NGGLE=/960x0/filters:quality(80)/cloudfront-us-east-2.images.arcpublishing.com/reuters/TWMP2G5O7VMTXJE6YIAF3GIPKM.jpg",
+          "https://www.reuters.com/resizer/_8apSAj_pl4_I_4yjBp0C34PgDE=/960x0/filters:quality(80)/cloudfront-us-east-2.images.arcpublishing.com/reuters/2UTCS4LPBZP5TEYJNLAMWI5QAI.jpg",
     ),
      NewsMList(
        imageUrl:
@@ -193,6 +193,136 @@ The Japanese yen's share was steady at 5.4% in the latest quarter from about 5.5
 IMF data also showed total global reserves rose to \$12.055 trillion in the second quarter from \$12.028 trillion in the first quarter. In the fourth quarter of 2021 reserves hit a record \$12.92 trillion.""",
                 imageUrl:
           "https://www.reuters.com/resizer/ov5Oy4npEY-qzC6yyxZeRNb1RS4=/960x0/filters:quality(80)/cloudfront-us-east-2.images.arcpublishing.com/reuters/OXFJYPJKX5MS5F2WCBMAPDGJXM.jpg",
+    ),
+    NewsMList(
+      title: "Sterling rises after UK growth data, but set for quarterly clobbering",
+      description:
+      """LONDON, Sept 29 (Reuters) - The pound rose on Friday after data showed the British economy grew quicker than expected since the start of the COVID-19 pandemic, but was still set for its worst quarter against the dollar in a year.
+
+The Office for National Statistics said Britain's economy in the second quarter of 2023 was 1.8% larger than in the final quarter of 2019, the last full quarter before the start of the pandemic.
+
+Its previous estimate on Aug. 11 concluded the economy was still 0.2% smaller than before the pandemic, which had placed it at the bottom of the table among major advanced economies.
+
+Sterling rose by as much as 0.52% to a session high of \$1.2265, and was last at \$1.2264. For the quarter, however, the currency has lost 3.3% in value.
+
+Earlier this week, it hit a six-month low of \$1.2211 under pressure from the ongoing rise in the dollar, which was heading for its strongest quarterly performance in a year.
+
+"Sterling has rallied in line with the dollar correction into this morning's market open, but there are no real UK-specific drivers that would justify a sustained sterling outperformance at this stage," ING strategist Francesco Pesole said.
+
+The dollar is getting an outsized boost from a hefty rise in U.S. Treasury yields, which reflects investors' belief that U.S. interest rates are unlikely to start falling anytime soon.
+
+The 10-year note has risen 45 basis points this month, compared with an 8 bps rise in 10-year UK gilt yields , which saps the pound's appeal to non-UK investors that can bag juicier returns elsewhere.
+
+Money markets show traders have not ruled out one final rate hike from the Bank of England this year and place a 33% chance on an increase at the upcoming meeting in November.
+
+Just a few weeks ago, traders were pricing in a peak of around 6% in UK rates next year. Removing that prospect has sent the pound down by over 3% this month, marking its largest monthly slide since last September's budget crisis stripped almost 4% off the currency.
+
+Against the euro , the pound has lost 0.6% this quarter and was last up 0.1% on the day against the single European currency at 86.51 pence.""",
+      imageUrl:
+      "https://www.reuters.com/resizer/5gS2qXPvGQ48g-zDMwrHVNCqALk=/960x0/filters:quality(80)/cloudfront-us-east-2.images.arcpublishing.com/reuters/JXZT64HHFBLWDLM4VD2BZVVVTY.jpg",
+    ),
+    NewsMList(
+      title: "Bankman-Fried trial poses biggest test to date for crypto's top cop",
+      description:
+      """NEW YORK, Sept 29 (Reuters) - Sam Bankman-Fried's upcoming trial on fraud charges marks a major test for a broader crackdown on white collar crime led by Manhattan's top federal prosecutor: Damian Williams.
+
+Upon taking office in late 2021 as the U.S. Attorney for the Southern District of New York, Williams said "rooting out corruption in our financial markets" would be one of his top priorities - a familiar role for an office known as the main enforcer on Wall Street.
+
+The Yale Law School graduate has since brought several indictments against former executives in the rough-and-tumble cryptocurrency space, as well as high-profile fraud charges against executives such as Charlie Javice of college financial aid platform Frank, Bill Hwang of Archegos Capital Management, and Joe Lewis, the billionaire former owner of an English soccer team. Javice, Hwang and Lewis have pleaded not guilty.
+
+Bankman-Fried's will be the first of Williams' blockbuster white collar cases to go to trial.
+
+The meteoric rise and even faster fall of the curly-haired, 31-year-old former billionaire who ran the FTX cryptocurrency exchange until its November 2022 collapse has captivated public attention, which will now be focused on how Williams' office handles the prosecution of the once-influential political donor accused of stealing billions of dollars in customer funds.
+
+The cases Williams, 43, has brought so far show he has been a "steward" of the SDNY's longstanding priorities, said Kan Nawaday, who overlapped with Williams at the office.
+
+"He's continuing the same type of rigor with pursuing cases, and pursuing noteworthy, righteous cases insofar as financial crimes and public corruption," said Nawaday, now a partner at law firm Venable.
+
+Williams won a victory at trial this year against a former product manager at non-fungible token (NFT) marketplace OpenSea for insider trading, after earlier securing an insider trading guilty plea from a former Coinbase Global (COIN.O) employee. Prosecutors had described the cases as the first insider trading cases brought involving digital assets.
+
+"This office has brought a number of significant cases in this space," Williams said in July in announcing charges against Alex Mashinsky, another crypto executive. "The Southern District of New York has historically been at the forefront of enforcement in any new area."
+
+Bankman-Fried and Mashinsky have each pleaded not guilty. Williams, through a spokesperson, declined an interview request.""",
+      imageUrl:
+      "https://www.reuters.com/resizer/aHxrwxZRn7NfgAuJuXaLpQ-x9Ns=/960x0/filters:quality(80)/cloudfront-us-east-2.images.arcpublishing.com/reuters/ZW7DCEEDO5ODLIZMJIA74G4UEU.jpg",
+    ),
+    NewsMList(
+      title: "Russia's central-bank chief: Key interest rate could be raised or kept on hold this year",
+      description:
+      """SOCHI, Russia, Sept 29 (Reuters) - Russia's central bank could increase its main interest rate or keep it at the current level of 13.0% during the rest of 2023, governor Elvira Nabiullina said on Friday.
+
+"The average rate forecast for this year implies both keeping the rate unchanged and raising it," she told a banking forum in the Black Sea resort of Sochi.
+
+Nabiullina also said rate decisions would depend on the situation in Russia's economy. The rate may be lowered when inflation reaches the target level of 4%, she said.
+
+Russia's central bank raised its key interest rate by 100 basis points to 13% on Sept. 15, jacking up the cost of borrowing at its third meeting in succession in response to a weaker rouble and other persistent inflationary pressures.
+
+At an emergency meeting in August, the regulator sharply raised the rate by 350 basis points to 12%.
+
+The central bank has adjusted its year-end forecast for inflation to 6.0-7.0% from 5.0-6.5%. Annual inflation was running at 5.33% as of Sept. 11, above the 4% target.""",
+      imageUrl:
+      "https://www.reuters.com/resizer/g-O0ZHh2cJFkdUQg_avpYCATMLc=/960x0/filters:quality(80)/cloudfront-us-east-2.images.arcpublishing.com/reuters/GNJ7Y5TXXRN2DEEA4DFZQHPUPE.jpg",
+    ),
+    NewsMList(
+      title: "Russia's central-bank chief: Key interest rate could be raised or kept on hold this year",
+      description:
+      """SOCHI, Russia, Sept 29 (Reuters) - Russia's central bank could increase its main interest rate or keep it at the current level of 13.0% during the rest of 2023, governor Elvira Nabiullina said on Friday.
+
+"The average rate forecast for this year implies both keeping the rate unchanged and raising it," she told a banking forum in the Black Sea resort of Sochi.
+
+Nabiullina also said rate decisions would depend on the situation in Russia's economy. The rate may be lowered when inflation reaches the target level of 4%, she said.
+
+Russia's central bank raised its key interest rate by 100 basis points to 13% on Sept. 15, jacking up the cost of borrowing at its third meeting in succession in response to a weaker rouble and other persistent inflationary pressures.
+
+At an emergency meeting in August, the regulator sharply raised the rate by 350 basis points to 12%.
+
+The central bank has adjusted its year-end forecast for inflation to 6.0-7.0% from 5.0-6.5%. Annual inflation was running at 5.33% as of Sept. 11, above the 4% target.""",
+      imageUrl:
+      "https://www.reuters.com/resizer/OS-PUy0Kdw6593GRxSFtkJegQ7Y=/960x0/filters:quality(80)/cloudfront-us-east-2.images.arcpublishing.com/reuters/Z7OZ3AOAFBJZFPXVKHFEXQQLHI.jpg",
+    ),
+    NewsMList(
+      title: "India misses out on FTSE Russell government bond index inclusion",
+      description:
+      """NEW DELHI/MUMBAI, Sept 29 (Reuters) - Global index provider FTSE Russell said on Friday it would not yet include India in an government bond index, a week after JPMorgan (JPM.N) said India would be part of its influential GBI-EM index suite starting next year.
+
+"Areas for improvement in the Indian government bond market structure highlighted by international investors remain largely unchanged from the previous March 2023 review," FTSE said in its annual country classification review for the FTSE Emerging Markets Government Bond Index (EMGBI)
+
+Indian government bonds and the local currency took the news in their stride.
+
+The rupee was trading slightly higher at 83.1000 to the U.S. dollar, after closing at 83.1850 on Thursday, while the benchmark 7.18% 2033 bond yield eased three basis points to 7.2126%, from 7.2414% at Thursday's close.
+
+"Expectations of inclusion in the FTSE index were not very high so local markets may not react to this much, and we are not expecting any major impact as far as flows are concerned," said VRC Reddy, treasury head at Karur Vysya Bank.
+
+Joining the FTSE index was expected to increase investments by index-linked funds. Analysts estimate India's inclusion in the JPMorgan index to bring in around \$23 billion in index-linked investments.
+
+The JP Morgan inclusion prompted BNP Paribas Asset Management to turn "more positive" on Indian bonds, Jean-Charles Sambor, head of emerging markets, fixed income at BNP Paribas Asset Management told Reuters.
+
+Sambor expects the benchmark bond yield to ease below 7% by end of the year and the rupee to ease to 82.00-82.25 per U.S. dollar in six months.""",
+      imageUrl:
+      "https://www.reuters.com/resizer/BIfbwzrToe7smYRf0VNZ73DKdiI=/960x0/filters:quality(80)/cloudfront-us-east-2.images.arcpublishing.com/reuters/WE3FEZFDUJL5JK6YSYBNKTNIQE.jpg",
+    ),
+    NewsMList(
+      title: "Take Five: Roll on Q4!",
+      description:
+      """LONDON, Sept 29 (Reuters) - There's a looming partial shutdown of the U.S. government, embattled developer China Evergrande on the brink, and markets still adjusting to central banks' higher for longer rates mantra.
+
+If that wasn't enough to kick off the final quarter of 2023, there's central bank meetings from Australia to Poland and closely-watched U.S. jobs data - if not delayed by a shutdown.
+
+Here's your week ahead in markets from Ira Iosebashvili in New York, Kevin Buckland in Tokyo, and Harry Robertson, Karin Strohecker and Marc Jones in London.
+
+1/ STANDOFF IN D.C.
+
+The world's No.1 economy is on the brink of another possible government shutdown that could damage its credit rating further, exacerbate market volatility and delay economic releases including the key Oct. 6 jobs report.
+
+Hundreds of thousands of federal workers will be furloughed and a wide range of services will pause if Congress fails to pass legislation that Democratic President Joe Biden can sign into law by midnight Saturday.
+
+A possible shutdown would be further evidence of how political polarization in Washington is weakening fiscal policymaking, Moody's says.
+
+It could also hurt sentiment among investors looking for timely updates on the economy. Economists polled by Reuters expect the U.S. economy created 150,000 jobs in September versus 187,000 in August.
+
+Stronger-than-expected data would likely bolster the 'higher for longer' rates stance that is hurting bonds and stocks.""",
+      imageUrl:
+      "https://www.reuters.com/resizer/aHBLrciygjfMT2ljdm9qceg-_VI=/960x0/filters:quality(80)/cloudfront-us-east-2.images.arcpublishing.com/reuters/5JI4EQHDYROTJJIERAFJEGGOYY.jpg",
     ),
   ];
 }

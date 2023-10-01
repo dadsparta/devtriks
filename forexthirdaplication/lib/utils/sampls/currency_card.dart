@@ -1,10 +1,10 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:forexthirdaplication/utils/consts/texts.dart';
+import 'package:forexthirdaplication/utils/consts/constant_text.dart';
 
 import '../../pages/detail_pages/currency_detail_page.dart';
-import '../consts/colors.dart';
+import '../consts/constant_colors.dart';
 import '../enums/forex_pairs_enum.dart';
 
 // ignore: must_be_immutable

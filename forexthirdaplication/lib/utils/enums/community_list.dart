@@ -7,7 +7,7 @@ class CommunityList {
           "Cryptocurrency (or “crypto”) is a digital currency used as an alternative payment method or as an investment. Cryptocurrencies get their name from the cryptographic techniques that enable people to buy, sell or trade them securely without the need for a controlling authority, such as a government or financial institutions.\n\nFor example, Bitcoin was developed primarily to be a form of payment that isn't controlled or distributed by a central bank. People invest in cryptocurrencies for the same reason anyone invests in anything. They hope its value will rise, netting them a profit.\nIf people began using Bitcoin for payments on a huge scale, demand for Bitcoin would go up, and in turn, its price in dollars would increase. So, if you'd purchased one Bitcoin before that increase in demand, you could theoretically sell that one Bitcoin for more U.S. dollars than you bought it for, making a profit. \nHow does cryptocurrency work?\nCryptocurrencies are supported by a technology known as blockchain, which maintains a tamper-resistant record of transactions and keeps track of who owns what. The use of blockchains addressed a problem faced by previous efforts to create purely digital currencies: preventing people from making copies of their holdings and attempting to spend it twice\nIndividual units of cryptocurrencies can be referred to as coins or tokens, depending on how they are used. Some are intended to be units of exchange for goods and services, others are stores of value, and some can be used to participate in specific software programs such as games and financial products.",
       author: "Perry Walkins",
       imageUrl:
-          "https://www.nerdwallet.com/assets/blog/wp-content/uploads/2022/02/GettyImages-1298198890-1920x1152.jpeg",
+          "https://www.reuters.com/resizer/K5fMsOKKwjQ_S49N80dsdDO8mp4=/1080x0/filters:quality(80)/cloudfront-us-east-2.images.arcpublishing.com/reuters/Q44G5E2KXFMBPI4MC2YMRUPUE4.jpg",
       videoId: "MpI5i1oky0Q",
     ),
     CommunityView(
@@ -42,6 +42,7 @@ class CommunityList {
           "https://www.reuters.com/resizer/W2ZfknWkMrPo-dcQaYNUNwATN9I=/960x0/filters:quality(80)/cloudfront-us-east-2.images.arcpublishing.com/reuters/BO4INJHP2FMLDAHI2RAQ5EKISY.jpg",
       videoId: "lVa9MLlOTl0",
     ),
+
   ];
 }
 

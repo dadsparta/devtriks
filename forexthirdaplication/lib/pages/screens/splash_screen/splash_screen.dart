@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:forexthirdaplication/utils/consts/texts.dart';
+import 'package:forexthirdaplication/utils/consts/constant_text.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:rx_shared_preferences/rx_shared_preferences.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
-import '../../../utils/consts/colors.dart';
+import '../../../utils/consts/constant_colors.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
