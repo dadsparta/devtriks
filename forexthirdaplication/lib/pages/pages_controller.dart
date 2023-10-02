@@ -31,11 +31,20 @@ class _PageControllerModelState extends State<PageControllerModel> {
       builder: (context, favoriteState, child) {
         return Scaffold(
           backgroundColor: firstColor,
+
           appBar: AppBar(
+            leading: IconButton(
+              onPressed: () {
+              },
+              icon: const Icon(Icons.arrow_back_ios_new_outlined, color: Colors.transparent),
+            ),
             backgroundColor: secondColor,
             title: Center(
               child: AppBarText(text: titleOfPage),
             ),
+            actions: [
+              IconButton( onPressed: () {  }, icon: Icon(Icons.calculate),color: Colors.transparent),
+            ],
           ),
           body: Stack(
             children: [

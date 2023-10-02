@@ -28,9 +28,7 @@ class _State extends State<NewsDetailPage> {
           child: AppBarText(text: 'News'),
         ),
         actions: [
-          Container(
-            height: 20,
-          )
+          IconButton( onPressed: () {  }, icon: Icon(Icons.calculate),color: Colors.transparent),
         ],
       ),
       body: Container(

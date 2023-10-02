@@ -23,12 +23,9 @@ class _State extends State<CommunityDetailPage> {
           },
           icon: const Icon(Icons.arrow_back_ios_new_outlined),
         ),
-        actions: const [
-          SizedBox(
-            height: 20,
-            width: 20,
-            child: Text(''),
-          )
+        actions:  [
+          IconButton( onPressed: () {  }, icon: Icon(Icons.calculate),color: Colors.transparent),
+
         ],
         title: const Center(
           child: AppBarText(text: 'Community'),

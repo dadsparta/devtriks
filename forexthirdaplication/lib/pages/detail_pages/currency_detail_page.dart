@@ -23,12 +23,8 @@ class CurrencyDetailPage extends StatelessWidget {
           },
           icon: const Icon(Icons.arrow_back_ios_new_outlined),
         ),
-        actions: const [
-          SizedBox(
-            height: 20,
-            width: 20,
-            child: Text(''),
-          )
+        actions:  [
+          IconButton( onPressed: () {  }, icon: Icon(Icons.calculate),color: Colors.transparent),
         ],
         title: Center(
           child: AppBarText(text: forexPair.name),
