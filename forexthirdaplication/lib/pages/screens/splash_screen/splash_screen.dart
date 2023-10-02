@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:forexthirdaplication/pages/pages_controller.dart';
 import 'package:forexthirdaplication/utils/consts/constant_text.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:rx_shared_preferences/rx_shared_preferences.dart';
@@ -186,7 +187,11 @@ class _SplashScreenState extends State<SplashScreen> {
               backgroundColor: secondColor,
               onPressed: () {
                 RxSharedPreferences.getInstance().setBool("authendicate", true);
-                Navigator.of(context).pushReplacementNamed("/main");
+                Navigator.of(context).pushReplacement(
+                  MaterialPageRoute(
+                    builder: (BuildContext context) => PageControllerModel(),
+                  ),
+                );
               },
               label: Row(
                 children: [
