@@ -33,7 +33,11 @@ class _CurrencyPageViewState extends State<CurrencyPageView> {
             itemBuilder: (context, index) {
               return CurrencyCard(index: index);
             },
-          )
+          ),
+          const SizedBox(
+            height: 125,
+          ),
+
         ],
       ),
     );

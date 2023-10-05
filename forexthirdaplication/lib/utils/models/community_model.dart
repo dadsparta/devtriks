@@ -1,3 +1,8 @@
+import 'package:json_annotation/json_annotation.dart';
+
+part 'community_model.g.dart';
+
+@JsonSerializable()
 class CommunityModel {
   final String title;
   final String description;
@@ -11,4 +16,8 @@ class CommunityModel {
         required this.author,
         required this.image,
         this.date = 'n'});
+
+  factory CommunityModel.fromJson(Map<String, dynamic> json) => _$CommunityModelFromJson(json);
+
+  Map<String, dynamic> toJson() => _$CommunityModelToJson(this);
 }

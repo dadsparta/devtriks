@@ -20,7 +20,41 @@ class ArticleTitleText extends StatelessWidget {
     );
   }
 }
+class RatingTitlesText extends StatelessWidget {
+  const RatingTitlesText({Key? key, required this.text}) : super(key: key);
+  final String text;
 
+  @override
+  Widget build(BuildContext context) {
+    return Text(
+      text,
+      style: GoogleFonts.montserrat(
+          fontSize: 16,
+          fontWeight: FontWeight.w600,
+          color: titleTextColor
+      ),
+    );
+  }
+}
+class RatingTitleText extends StatelessWidget {
+  const RatingTitleText({Key? key, required this.text}) : super(key: key);
+  final String text;
+
+  @override
+  Widget build(BuildContext context) {
+    return Text(
+      text,
+      style: GoogleFonts.montserrat(
+          fontSize: 13,
+          fontWeight: FontWeight.w600,
+          color: titleTextColor
+      ),
+      maxLines: 2,
+      textAlign: TextAlign.center,
+      overflow: TextOverflow.ellipsis,
+    );
+  }
+}
 class ArticleTitleTextDetail extends StatelessWidget {
   const ArticleTitleTextDetail({Key? key, required this.text}) : super(key: key);
   final String text;
@@ -37,7 +71,23 @@ class ArticleTitleTextDetail extends StatelessWidget {
     );
   }
 }
+class ConsultingText extends StatelessWidget {
+  const ConsultingText({Key? key, required this.text}) : super(key: key);
+  final String text;
 
+  @override
+  Widget build(BuildContext context) {
+    return Text(
+      text,
+      textAlign: TextAlign.center,
+      style: GoogleFonts.montserrat(
+          fontSize: 16,
+          fontWeight: FontWeight.w600,
+          color: firstColor
+      ),
+    );
+  }
+}
 class AppBarText extends StatelessWidget {
   const AppBarText({Key? key, required this.text}) : super(key: key);
   final String text;
@@ -90,6 +140,22 @@ class PreviewText extends StatelessWidget {
   }
 }
 
+
+class FirstPlaceText extends StatelessWidget {
+  const FirstPlaceText({Key? key, required this.text}) : super(key: key);
+  final String text;
+
+  @override
+  Widget build(BuildContext context) {
+    return Text(
+      text,
+      style: GoogleFonts.montserrat(
+        fontSize: 10,
+        fontWeight: FontWeight.w400,
+      ),
+    );
+  }
+}
 class CurrencyText extends StatelessWidget {
   const CurrencyText({Key? key, required this.text}) : super(key: key);
   final String text;

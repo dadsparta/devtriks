@@ -49,13 +49,50 @@ class _SplashScreenState extends State<SplashScreen> {
               ),
             ),
           ),
+          const Expanded(
+            flex: 1,
+            child: Padding(
+              padding: EdgeInsets.all(16.0),
+              child: Column(
+                children: [
+                  AppBarText(text: 'READ OUR DAILY NEWS'),
+                ],
+              ),
+            ),
+          ),
+        ],
+      ),
+    ),
+    Padding(
+      padding: const EdgeInsets.all(8.0),
+      child: Column(
+        children: [
           Expanded(
+            flex: 2,
+            child: SizedBox(
+              width: double.infinity,
+              child: Image.asset(
+                "assets/ratings.png",
+                alignment: Alignment.center,
+                height: 400,
+              ),
+            ),
+          ),
+           Expanded(
             flex: 1,
             child: Padding(
               padding: const EdgeInsets.all(16.0),
               child: Column(
                 children: [
-                  const AppBarText(text: 'READ OUR DAILY NEWS'),
+                  Text(
+                    "CHECK OUT THE LATEST CURRENCY AND MEDIA PERSONALITY RATINGS",
+                    textAlign: TextAlign.center,
+                    style: GoogleFonts.montserrat(
+                      fontSize: 16,
+                      fontWeight: FontWeight.w600,
+                      color: Colors.white,
+                    ),
+                  ),
                 ],
               ),
             ),
@@ -173,7 +210,7 @@ class _SplashScreenState extends State<SplashScreen> {
                   );
                 },
                 controller: _controller,
-                count: 4,
+                count: 5,
                 effect: const WormEffect(
                   activeDotColor: Colors.white,
                 ),
@@ -182,7 +219,7 @@ class _SplashScreenState extends State<SplashScreen> {
           ],
         ),
       ),
-      floatingActionButton: _currentPage == 3
+      floatingActionButton: _currentPage == 4
           ? FloatingActionButton.extended(
               backgroundColor: secondColor,
               onPressed: () {

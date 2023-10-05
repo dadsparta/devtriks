@@ -73,7 +73,11 @@ class _CommunityPageViewState extends State<CommunityPageView> {
                     height: 20,
                   );
                 },
-              )
+              ),
+              const SizedBox(
+                height: 125,
+              ),
+
             ],
           ),
         );

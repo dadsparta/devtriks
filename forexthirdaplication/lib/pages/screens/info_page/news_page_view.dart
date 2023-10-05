@@ -70,7 +70,11 @@ class _MainPageViewState extends State<MainPageView> {
                     height: 20,
                   );
                 },
-              )
+              ),
+              const SizedBox(
+                height: 125,
+              ),
+
             ],
           ),
         );
