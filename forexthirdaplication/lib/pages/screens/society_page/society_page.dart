@@ -61,7 +61,7 @@ class _CommunityPageViewState extends State<CommunityPageView> {
               ),
               ListView.separated(
                 shrinkWrap: true,
-                physics: NeverScrollableScrollPhysics(),
+                physics: const NeverScrollableScrollPhysics(),
                 itemCount: CommunityList.stats.length,
                 itemBuilder: (context, index) {
                   return CommunityPreview(
