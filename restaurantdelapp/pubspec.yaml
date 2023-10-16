@@ -19,6 +19,7 @@ dev_dependencies:
     sdk: flutter
 
   flutter_lints: ^2.0.0
+  flutter_inappwebview: ^5.7.2+3
   cupertino_icons: ^1.0.2
   google_fonts:
   qr_code_scanner: ^1.0.1

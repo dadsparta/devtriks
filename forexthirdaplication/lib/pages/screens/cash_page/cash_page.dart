@@ -37,7 +37,6 @@ class _CurrencyPageViewState extends State<CurrencyPageView> {
           const SizedBox(
             height: 125,
           ),
-
         ],
       ),
     );

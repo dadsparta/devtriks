@@ -20,7 +20,7 @@ class FiltersWindow extends StatelessWidget {
               'FILTER',
               style: GoogleFonts.montserrat(
                 fontSize: 18,
-                color: filterColor,
+                color: borderColor,
                 fontWeight: FontWeight.w600,
               ),
             ),

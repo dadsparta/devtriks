@@ -3,8 +3,11 @@ import 'package:flutter/material.dart';
 import 'package:restaurantdelapp/utils/consts/colors.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:restaurantdelapp/utils/enums/filter_list.dart';
+import 'package:restaurantdelapp/utils/enums/food_list.dart';
 import 'package:restaurantdelapp/utils/enums/tags_list.dart';
 import 'package:restaurantdelapp/utils/samples/fliter_model.dart';
+import 'package:restaurantdelapp/utils/samples/prev_card_food.dart';
+import 'package:restaurantdelapp/utils/samples/tag_sample.dart';
 
 import '../../utils/consts/texts.dart';
 
@@ -79,23 +82,37 @@ class _MenuPageViewState extends State<MenuPageView> {
                 const SizedBox(
                   height: 20,
                 ),
-
               ],
             ),
-
           ),
-          ListView.builder(
-            scrollDirection: Axis.horizontal,
-            shrinkWrap: true,
-            itemBuilder: (context, index) {
-              return Container(
-                height: 20,
-                padding: EdgeInsets.all(20),
-                child: Text(TagsList.tagsList[index].title),
-              );
-            },
-            itemCount: TagsList.tagsList.length,
-          )
+          SizedBox(
+            height: 40,
+            child: ListView.builder(
+              scrollDirection: Axis.horizontal,
+              shrinkWrap: true,
+              itemBuilder: (context, index) {
+                return TagSample(index: index);
+              },
+              itemCount: TagsList.tagsList.length,
+            ),
+          ),
+          SizedBox(
+            height: 20,
+          ),
+          Container(
+            padding: EdgeInsets.fromLTRB(14, 0, 14, 0),
+            height: 2000,
+            child: GridView.builder(
+              itemBuilder: (context, index) {
+                return PrevFoodCard(index: index);
+              },
+              gridDelegate: const SliverGridDelegateWithMaxCrossAxisExtent(
+                  maxCrossAxisExtent: 200,
+                  crossAxisSpacing: 20,
+                  mainAxisSpacing: 20),
+              itemCount: FoodList.foodList.length,
+            ),
+          ),
         ],
       ),
     );
