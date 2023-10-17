@@ -1,13 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:restaurantdelapp/pages/detail_pages/product_detail_page.dart';
+import 'package:restaurantdelapp/utils/states/busket_state.dart';
 
 import '../consts/colors.dart';
 import '../consts/texts.dart';
 import '../enums/food_list.dart';
 
 class PrevFoodCard extends StatefulWidget {
-  const PrevFoodCard({Key? key, required this.index}) : super(key: key);
-
+  PrevFoodCard({Key? key, required this.index, required this.busketState})
+      : super(key: key);
+  BusketState busketState;
   final int index;
 
   @override
@@ -15,10 +17,11 @@ class PrevFoodCard extends StatefulWidget {
 }
 
 class _PrevFoodCardState extends State<PrevFoodCard> {
+
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.all(8),
+      padding: const EdgeInsets.all(8),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(5),
         border: Border.all(color: borderColor),
@@ -29,7 +32,8 @@ class _PrevFoodCardState extends State<PrevFoodCard> {
             onTap: () {
               Navigator.of(context).push(
                 MaterialPageRoute(
-                  builder: (context) => ProductDetailPage(index: widget.index),
+                  builder: (context) => ProductDetailPage(
+                      index: widget.index, busketState: widget.busketState),
                 ),
               );
             },
@@ -46,8 +50,9 @@ class _PrevFoodCardState extends State<PrevFoodCard> {
                   onTap: () {
                     Navigator.of(context).push(
                       MaterialPageRoute(
-                        builder: (context) =>
-                            ProductDetailPage(index: widget.index),
+                        builder: (context) => ProductDetailPage(
+                            index: widget.index,
+                            busketState: widget.busketState),
                       ),
                     );
                   },
@@ -64,17 +69,27 @@ class _PrevFoodCardState extends State<PrevFoodCard> {
               ),
               Expanded(
                 flex: 1,
-                child: Container(
-                  height: 30,
-                  decoration: BoxDecoration(
+                child: GestureDetector(
+                  onTap: () {
+                    setState(
+                      () {
+                        widget.busketState.addToBusket(widget.index);
+                      },
+                    );
+                  },
+                  child: Container(
+                    height: 30,
+                    decoration: BoxDecoration(
                       color: secondColor,
-                      borderRadius: BorderRadius.circular(5)),
-                  child: const Center(
-                    child: Text(
-                      '+',
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 18,
+                      borderRadius: BorderRadius.circular(5),
+                    ),
+                    child: const Center(
+                      child: Text(
+                        '+',
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 18,
+                        ),
                       ),
                     ),
                   ),

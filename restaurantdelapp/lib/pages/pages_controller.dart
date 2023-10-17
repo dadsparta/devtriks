@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:restaurantdelapp/pages/qr_page/qr_page_view.dart';
 import 'package:restaurantdelapp/pages/settings_page/settings_page_view.dart';
-
+import 'package:restaurantdelapp/utils/states/busket_state.dart';
 
 import '../utils/consts/colors.dart';
 import 'menu_page/menu_page_view.dart';
@@ -12,19 +12,25 @@ import 'order_page/order_page_view.dart';
 class PageControllerModel extends StatefulWidget {
   PageControllerModel({Key? key}) : super(key: key);
 
-
   @override
   State<PageControllerModel> createState() => _PageControllerModelState();
 }
 
 class _PageControllerModelState extends State<PageControllerModel> {
-
+  BusketState busketState = BusketState();
   Widget? pageWidget;
   bool isTuped = false;
   int currentIndexNavBar = 0;
+  bool isEmptyCart = true;
 
   @override
   Widget build(BuildContext context) {
+    if (busketState.countOfBusketItems == 0) {
+      isEmptyCart = true;
+    }
+    else{
+      isEmptyCart = false;
+    }
     SystemChrome.setSystemUIOverlayStyle(
       const SystemUiOverlayStyle(
           statusBarColor: Colors.transparent,
@@ -33,45 +39,78 @@ class _PageControllerModelState extends State<PageControllerModel> {
     return Scaffold(
       backgroundColor: firstColor,
       body: Container(
-        child: isTuped ? pageWidget : MenuPageView(),
+        child: isTuped
+            ? pageWidget
+            : MenuPageView(
+                busketState: busketState,
+              ),
       ),
       bottomNavigationBar: BottomNavigationBar(
         backgroundColor: firstColor,
         unselectedItemColor: textColor,
         selectedItemColor: secondColor,
-        items: const [
+        items: [
+          const BottomNavigationBarItem(
+              icon: Icon(Icons.menu, color: secondColor), label: 'Menu'),
+          const BottomNavigationBarItem(
+              icon: Icon(Icons.qr_code_scanner, color: secondColor),
+              label: 'Scan QR'),
           BottomNavigationBarItem(
-              icon: Icon(Icons.menu, color: secondColor),
-              label: 'Menu'),
-          BottomNavigationBarItem(
-              icon: Icon(Icons.qr_code_scanner, color: secondColor), label: 'Scan QR'),
-          BottomNavigationBarItem(
-              icon: Icon(Icons.card_travel, color: secondColor), label: 'Order'),
-          BottomNavigationBarItem(
-              icon: Icon(Icons.settings_outlined, color: secondColor), label: 'Settings'),
-
+              icon: Stack(
+                children: [
+                  const Align(
+                    alignment: Alignment.center,
+                    child: Icon(Icons.card_travel, color: secondColor),
+                  ),
+                   !isEmptyCart ? Align(
+                    alignment: Alignment.centerRight,
+                    child:  Container(
+                      height: 18,
+                      width: 18,
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(50),
+                          color: Colors.red),
+                      child: Center(
+                        child: Text(
+                          busketState.countOfBusketItems.toString(),
+                        ),
+                      ),
+                    ),
+                  ): Container(),
+                ],
+              ),
+              label: 'Order'),
+          const BottomNavigationBarItem(
+              icon: Icon(Icons.settings_outlined, color: secondColor),
+              label: 'Settings'),
         ],
         currentIndex: currentIndexNavBar,
         onTap: (value) {
           return setState(
-                () {
+            () {
               isTuped = true;
               currentIndexNavBar = value;
               switch (value) {
                 case 0:
-                  pageWidget = MenuPageView();
+                  pageWidget = MenuPageView(
+                    busketState: busketState,
+                  );
                   break;
                 case 1:
                   pageWidget = QRPageView();
                   break;
                 case 2:
-                  pageWidget = OrderPageView();
+                  pageWidget = OrderPageView(
+                    busketState: busketState,
+                  );
                   break;
                 case 3:
                   pageWidget = SettingsPageView();
                   break;
                 default:
-                  pageWidget = MenuPageView();
+                  pageWidget = MenuPageView(
+                    busketState: busketState,
+                  );
               }
             },
           );

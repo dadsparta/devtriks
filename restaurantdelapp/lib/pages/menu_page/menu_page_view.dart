@@ -8,12 +8,13 @@ import 'package:restaurantdelapp/utils/enums/tags_list.dart';
 import 'package:restaurantdelapp/utils/samples/fliter_model.dart';
 import 'package:restaurantdelapp/utils/samples/prev_card_food.dart';
 import 'package:restaurantdelapp/utils/samples/tag_sample.dart';
+import 'package:restaurantdelapp/utils/states/busket_state.dart';
 
 import '../../utils/consts/texts.dart';
 
 class MenuPageView extends StatefulWidget {
-  const MenuPageView({Key? key}) : super(key: key);
-
+  MenuPageView({Key? key, required this.busketState}) : super(key: key);
+  BusketState busketState;
   @override
   State<MenuPageView> createState() => _MenuPageViewState();
 }
@@ -23,6 +24,7 @@ class _MenuPageViewState extends State<MenuPageView> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: ListView(
+        physics: BouncingScrollPhysics(),
         shrinkWrap: true,
         children: [
           Padding(
@@ -40,24 +42,24 @@ class _MenuPageViewState extends State<MenuPageView> {
                 ),
                 CupertinoTextField(
                   prefix: Container(
-                    padding: EdgeInsets.fromLTRB(20, 0, 0, 0),
-                    child: Icon(
+                    padding: const EdgeInsets.fromLTRB(20, 0, 0, 0),
+                    child: const Icon(
                       Icons.search,
                       color: textLowColor,
                     ),
                   ),
                   suffix: Container(
-                    padding: EdgeInsets.fromLTRB(0, 0, 20, 0),
+                    padding: const EdgeInsets.fromLTRB(0, 0, 20, 0),
                     child: GestureDetector(
                         onTap: () {
                           showModalBottomSheet(
                             context: context,
                             builder: (context) {
-                              return FiltersWindow();
+                              return const FiltersWindow();
                             },
                           );
                         },
-                        child: Icon(CupertinoIcons.color_filter)),
+                        child: const Icon(CupertinoIcons.color_filter)),
                   ),
                   placeholder: "SEARCH FOR",
                   padding: const EdgeInsets.all(20),
@@ -73,7 +75,7 @@ class _MenuPageViewState extends State<MenuPageView> {
                   height: 20,
                 ),
                 Container(
-                  padding: EdgeInsets.all(0),
+                  padding: const EdgeInsets.all(0),
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(16),
                   ),
@@ -96,15 +98,16 @@ class _MenuPageViewState extends State<MenuPageView> {
               itemCount: TagsList.tagsList.length,
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 20,
           ),
           Container(
-            padding: EdgeInsets.fromLTRB(14, 0, 14, 0),
+            padding: const EdgeInsets.fromLTRB(14, 0, 14, 0),
             height: 2000,
             child: GridView.builder(
+              physics: NeverScrollableScrollPhysics(),
               itemBuilder: (context, index) {
-                return PrevFoodCard(index: index);
+                return PrevFoodCard(index: index, busketState: widget.busketState,);
               },
               gridDelegate: const SliverGridDelegateWithMaxCrossAxisExtent(
                   maxCrossAxisExtent: 200,

@@ -1,8 +1,25 @@
 import 'package:flutter/material.dart';
 import 'package:restaurantdelapp/pages/pages_controller.dart';
+import 'package:restaurantdelapp/pages/splash_screen/splash_screen.dart';
+import 'package:rx_shared_preferences/rx_shared_preferences.dart';
 
-void main() {
-  runApp(const MyApp());
+bool checkerx = false;
+Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  final RxSharedPreferences prefs = RxSharedPreferences.getInstance();
+  final bool? turnOfNotifications = await prefs.getBool("turnOfNotifications");
+  final bool? checker = await prefs.getBool("authendicate");
+
+  if (turnOfNotifications == null) {
+    await RxSharedPreferences.getInstance()
+        .setBool("turnOfNotifications", true);
+  }
+  if ( checker == true) {
+    checkerx = await prefs.getBool("authendicate") as bool;
+  }
+  runApp(
+        const MyApp(),
+  );
 }
 
 class MyApp extends StatelessWidget {
@@ -15,7 +32,11 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
       ),
       debugShowCheckedModeBanner: false,
-      home: PageControllerModel(),
+      initialRoute: checkerx ? "/" : "/splash",
+      routes: {
+        "/splash": (context) => SplashScreen(),
+        "/": (context) => PageControllerModel(),
+      },
     );
   }
 }

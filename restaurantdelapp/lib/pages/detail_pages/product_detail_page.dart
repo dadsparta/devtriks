@@ -3,12 +3,14 @@ import 'package:flutter/material.dart';
 import 'package:restaurantdelapp/utils/consts/texts.dart';
 import 'package:restaurantdelapp/utils/enums/food_list.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:restaurantdelapp/utils/states/busket_state.dart';
 
 import '../../utils/consts/colors.dart';
 
 class ProductDetailPage extends StatefulWidget {
-  ProductDetailPage({Key? key, required this.index}) : super(key: key);
+  ProductDetailPage({Key? key, required this.index, required this.busketState}) : super(key: key);
   final int index;
+  BusketState busketState;
   int count = 1;
 
   @override
@@ -99,9 +101,13 @@ class _ProductDetailPageState extends State<ProductDetailPage> {
                           ),
                           Expanded(
                             child: IconButton(
-                              onPressed: () {setState(() {
-                                widget.count++;
-                              });},
+                              onPressed: () {
+                                setState(
+                                  () {
+                                    widget.count++;
+                                  },
+                                );
+                              },
                               icon: Icon(Icons.add),
                             ),
                           ),
@@ -111,16 +117,24 @@ class _ProductDetailPageState extends State<ProductDetailPage> {
                     SizedBox(
                       width: 15,
                     ),
-                    Container(
-                      height: 50,
-                      width: 150,
-                      decoration: BoxDecoration(
-                        color: secondColor,
-                        borderRadius: BorderRadius.circular(50),
+                    GestureDetector(
+                      onTap: () {
+                        setState(() {
+                          widget.busketState.addToBusketCount(widget.index,widget.count);
+                        });
+                        Navigator.pop(context);
+                      },
+                      child: Container(
+                        height: 50,
+                        width: 150,
+                        decoration: BoxDecoration(
+                          color: secondColor,
+                          borderRadius: BorderRadius.circular(50),
+                        ),
+                        child: Center(
+                            child: Text('ADD TO ORDER',
+                                style: TextStyle(color: Colors.white))),
                       ),
-                      child: Center(
-                          child: Text('ADD TO ORDER',
-                              style: TextStyle(color: Colors.white))),
                     )
                   ],
                 ),
