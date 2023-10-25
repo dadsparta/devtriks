@@ -16,7 +16,7 @@ class _State extends State<CommunityDetailPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: firstColor,
+        backgroundColor: firstsColor,
         leading: IconButton(
           onPressed: () {
             return Navigator.pop(context);
